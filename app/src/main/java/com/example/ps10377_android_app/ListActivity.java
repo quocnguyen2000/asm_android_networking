@@ -87,10 +87,10 @@ public class ListActivity extends AppCompatActivity {
                     JSONObject jsonObject = new JSONObject(response);
                     JSONArray jsonArray = jsonObject.getJSONArray("data");
 
-                    Toast.makeText(ListActivity.this,jsonObject.getString("message"), Toast.LENGTH_SHORT).show();
+                    Toast.makeText(ListActivity.this,jsonObject.getString("message"),Toast.LENGTH_SHORT).show();
                     for (int i = 0; i<jsonArray.length(); i++){
                         JSONObject o = jsonArray.getJSONObject(i);
-                       Model item = new Model(
+                        Model item = new Model(
                                 o.getString("id"),
                                 o.getString("uid"),
                                 o.getString("name"),
@@ -112,11 +112,11 @@ public class ListActivity extends AppCompatActivity {
             @Override
             public void onErrorResponse(VolleyError error) {
                 progressDialog.hide();
-                Toast.makeText(ListActivity.this, "Failed", Toast.LENGTH_SHORT).show();
+                Toast.makeText(ListActivity.this, "Failed",Toast.LENGTH_SHORT).show();
             }
         }){
-            protected Map<String, String> getParams() throws AuthFailureError {
-                Map<String, String> params = new HashMap<>();
+            protected Map<String , String> getParams() throws AuthFailureError {
+                Map<String , String> params = new HashMap<>();
                 params.put("name", "kl");
                 return params;
             }

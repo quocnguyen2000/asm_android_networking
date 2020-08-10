@@ -5,7 +5,7 @@ package com.example.ps10377_android_app;
  */
 
 public class Constants {
-    public static final String URL= "http://192.168.1.37/";
+    public static final String URL= "http://10.82.151.122/";
     public static final String ROOT_URL = URL+"android/crud_api/";
     public static final String URL_ADD = ROOT_URL+"add.php";
     public static final String URL_DELETE = ROOT_URL+"delete.php";
